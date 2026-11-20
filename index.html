@@ -1464,7 +1464,7 @@ a.share-btn { display: inline-block; }
   // Fetch one page of results for a genre (a random page, so a reload shows different paintings).
   function fetchArtPage(genre, page) {
     var fields = "id,title,artist_title,date_display,image_id,artwork_type_title,is_public_domain,short_description,medium_display,place_of_origin,date_start,date_end,dimensions,is_on_view,gallery_title,artist_display,style_title,subject_titles,color,credit_line,thumbnail";
-    var base = "https://api.artic.edu/api/v1/artworks";
+    var base = "/artic";
     var pins = ART_PINS[genre] || [];
     var url = pins.length
       ? base + "?ids=" + pins.join(",") + "&fields=" + fields
@@ -1757,7 +1757,7 @@ a.share-btn { display: inline-block; }
 
   // ---------- Paintings from each composer's homeland ----------
   var ART_FIELDS = "id,title,artist_title,date_display,image_id,artwork_type_title,is_public_domain,short_description,medium_display,place_of_origin,date_start,date_end,dimensions,is_on_view,gallery_title,artist_display,style_title,subject_titles,color,credit_line,thumbnail";
-  var SEARCH_URL = "https://api.artic.edu/api/v1/artworks/search";
+  var SEARCH_URL = "/artic/search";
   var originCache = {};
 
   // Which of the composer's places (if any) a painting comes from; returns the reason it fits.
