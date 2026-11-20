@@ -1636,7 +1636,7 @@ a.share-btn { display: inline-block; }
   }
   // onReady(img, readable): readable is true when the page may sample the painting's colors.
   function showArt(plate, creditEl, d, onReady, lead, ctx) {
-    var url = "https://www.artic.edu/iiif/2/" + d.image_id + "/full/843,/0/default.jpg";
+    var url = "/artic-img/" + d.image_id;
     loadImg(url, true).then(function (im) { return { im: im, ok: true }; },
       function () { return loadImg(url, false).then(function (im) { return { im: im, ok: false }; }); })
     .then(function (res) {
