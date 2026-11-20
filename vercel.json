@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/artic/search", "destination": "https://api.artic.edu/api/v1/artworks/search" },
-    { "source": "/artic", "destination": "https://api.artic.edu/api/v1/artworks" }
+    { "source": "/artic/search", "destination": "/api/artic?p=search" },
+    { "source": "/artic", "destination": "/api/artic" }
   ]
 }
